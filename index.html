@@ -1,0 +1,98 @@
+<form class="application-form" id="applicationForm">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" name="name" class="form-input" type="text" placeholder="Enter first name" required />
+    </div>
+    <div class="form-group">
+      <label for="surname">Surname</label>
+      <input id="surname" name="surname" class="form-input" type="text" placeholder="Enter surname" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="contact">Contact Number</label>
+      <input id="contact" name="contact" class="form-input" type="tel" placeholder="Enter contact number" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input id="email" name="email" class="form-input" type="email" placeholder="Enter email address" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="applicantType">Are you already an existing agent or have you never been an agent?</label>
+    <select id="applicantType" name="applicantType" class="form-select" onchange="toggleQuestionSets()" required>
+      <option value="">Select an option</option>
+      <option value="Existing Agent">Existing Agent</option>
+      <option value="Never Been an Agent">Never Been an Agent</option>
+    </select>
+    <div class="helper">Your answer will show the relevant next questions below.</div>
+  </div>
+
+  <div id="existingQuestions" class="question-block">
+    <h4>Questions for Existing Agents</h4>
+    <div class="form-group">
+      <label for="existingQ1">1. How long have you been in real estate?</label>
+      <input id="existingQ1" name="existingQ1" class="form-input" type="text" placeholder="Years / months in the industry" />
+    </div>
+    <div class="form-group">
+      <label for="existingQ2">2. Which area or market are you currently working in?</label>
+      <input id="existingQ2" name="existingQ2" class="form-input" type="text" placeholder="Enter your current area or market" />
+    </div>
+    <div class="form-group">
+      <label for="existingQ3">3. What attracted you to consider KW North?</label>
+      <textarea id="existingQ3" name="existingQ3" class="form-textarea" placeholder="Share what stood out to you"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="existingQ4">4. What kind of support, leadership, or systems are you looking for in your next business home?</label>
+      <textarea id="existingQ4" name="existingQ4" class="form-textarea" placeholder="Tell us what matters most to you"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="existingQ5">5. What are your business goals for the next 12 months?</label>
+      <textarea id="existingQ5" name="existingQ5" class="form-textarea" placeholder="Share your next-level goals"></textarea>
+    </div>
+  </div>
+
+  <div id="newQuestions" class="question-block">
+    <h4>Questions for Applicants New to Being an Agent</h4>
+    <div class="form-group">
+      <label for="newQ1">1. Why do you want to become a real estate agent?</label>
+      <textarea id="newQ1" name="newQ1" class="form-textarea" placeholder="Tell us what motivated you to explore the industry"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="newQ2">2. Are you comfortable working in a commission-based environment while building your business?</label>
+      <select id="newQ2" name="newQ2" class="form-select">
+        <option value="">Select an option</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Unsure — I would like more information</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="newQ3">3. Do you have reliable transport, a smartphone, and access to a laptop or computer?</label>
+      <textarea id="newQ3" name="newQ3" class="form-textarea" placeholder="Tell us what you currently have available"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="newQ4">4. Are you willing to commit to training, accountability, and learning systems to build your business?</label>
+      <select id="newQ4" name="newQ4" class="form-select">
+        <option value="">Select an option</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>I would like to understand more</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="newQ5">5. What do you believe will make you successful as an agent?</label>
+      <textarea id="newQ5" name="newQ5" class="form-textarea" placeholder="Share your strengths, mindset, or work ethic"></textarea>
+    </div>
+  </div>
+
+  <div id="successBox" class="success-box"></div>
+
+  <div class="submit-row">
+    <div class="submit-note">Your application will be sent directly to KW North for review.</div>
+    <button class="btn btn-primary" id="submitBtn" type="submit">Submit Application</button>
+  </div>
+</form>
