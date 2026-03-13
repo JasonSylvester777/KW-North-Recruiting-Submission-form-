@@ -409,7 +409,8 @@
 
     .form-input,
     .form-select,
-    .form-textarea {
+    .form-textarea,
+    .form-file {
       width: 100%;
       border: 1px solid var(--gray-300);
       border-radius: 16px;
@@ -741,21 +742,6 @@
                   <label for="existingQ2">2. Which area or market are you currently working in?</label>
                   <input id="existingQ2" name="existingQ2" class="form-input" type="text" placeholder="Enter your current area or market" />
                 </div>
-
-                <div class="form-group">
-                  <label for="existingQ3">3. What attracted you to consider KW North?</label>
-                  <textarea id="existingQ3" name="existingQ3" class="form-textarea" placeholder="Share what stood out to you"></textarea>
-                </div>
-
-                <div class="form-group">
-                  <label for="existingQ4">4. What kind of support, leadership, or systems are you looking for in your next business home?</label>
-                  <textarea id="existingQ4" name="existingQ4" class="form-textarea" placeholder="Tell us what matters most to you"></textarea>
-                </div>
-
-                <div class="form-group">
-                  <label for="existingQ5">5. What are your business goals for the next 12 months?</label>
-                  <textarea id="existingQ5" name="existingQ5" class="form-textarea" placeholder="Share your next-level goals"></textarea>
-                </div>
               </div>
 
               <div id="newQuestions" class="question-block">
@@ -794,6 +780,12 @@
                 <div class="form-group">
                   <label for="newQ5">5. What do you believe will make you successful as an agent?</label>
                   <textarea id="newQ5" name="newQ5" class="form-textarea" placeholder="Share your strengths, mindset, or work ethic"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="cvUpload">Upload CV</label>
+                  <input id="cvUpload" name="cvUpload" class="form-file" type="file" accept=".pdf,.doc,.docx" />
+                  <div class="helper">CV upload is visible on the form. The current backend will need an upgrade before the actual file can be stored.</div>
                 </div>
               </div>
 
@@ -898,7 +890,7 @@
               <img src="https://drive.google.com/thumbnail?id=1VglaO-ke0CgunsMVIP-Ezy2W9R_S2oV9&sz=w800" alt="Jason Sylvester" />
             </div>
             <h3>Jason Sylvester</h3>
-            <div class="team-role">MCTT / Property Squad Admin</div>
+            <div class="team-role">MCTT / Technology Trainer</div>
             <p>Jason supports agents with systems, training, technology, and practical day-to-day assistance across the business.</p>
           </article>
         </div>
@@ -955,14 +947,12 @@
         applicantType: document.getElementById('applicantType').value,
         existingQ1: document.getElementById('existingQ1').value.trim(),
         existingQ2: document.getElementById('existingQ2').value.trim(),
-        existingQ3: document.getElementById('existingQ3').value.trim(),
-        existingQ4: document.getElementById('existingQ4').value.trim(),
-        existingQ5: document.getElementById('existingQ5').value.trim(),
         newQ1: document.getElementById('newQ1').value.trim(),
         newQ2: document.getElementById('newQ2').value,
         newQ3: document.getElementById('newQ3').value.trim(),
         newQ4: document.getElementById('newQ4').value,
-        newQ5: document.getElementById('newQ5').value.trim()
+        newQ5: document.getElementById('newQ5').value.trim(),
+        cvFileName: document.getElementById('cvUpload').files[0] ? document.getElementById('cvUpload').files[0].name : ''
       };
 
       try {
