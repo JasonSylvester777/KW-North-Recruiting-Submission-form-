@@ -124,6 +124,24 @@
       color: var(--gray-600);
     }
 
+    .logo-block {
+      margin-top: 24px;
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 18px;
+      border: 1px solid var(--gray-200);
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .logo-image {
+      display: block;
+      height: 70px;
+      width: auto;
+      max-width: 100%;
+    }
+
     .hero-actions {
       display: flex;
       gap: 14px;
@@ -599,6 +617,7 @@
       .application-form,
       .form-shell-header,
       .process-card { padding: 20px; }
+      .logo-image { height: 56px; }
     }
   </style>
 </head>
@@ -611,6 +630,10 @@
           <h1>KW North Agent Application Form</h1>
           <p class="hero-subtitle">You are welcome here. Whether you are experienced in real estate or just starting out, KW North is a place where you can learn, grow, and build a business with real support behind you.</p>
           <p class="hero-text">At KW North, we believe people matter, growth matters, and opportunity matters. We are passionate about helping agents build careers worth having through training, leadership, technology, accountability, and a culture of support. If you are looking for a place to belong, to improve, and to create a meaningful future in property, we would love to hear from you.</p>
+
+          <div class="logo-block">
+            <img src="KW_LOGO-removebg-preview.png" alt="KW North Keller Williams Realty" class="logo-image" />
+          </div>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#application">Apply Now</a>
